@@ -30,3 +30,26 @@
 - class variable - refers to attributes that are simply members of a class
 - Encapsulation - The process for providing a public interface for interacting with the object while hiding other information inside the object
 - Inheritance concept - (Different classes can have similar components - hence subclasses(children) can share some components from parents through inheritance.)
+
+- => - used for single statements
+
+- imports - for importing APIs
+
+## Variables
+
+- Variables store references
+- Example
+
+```
+var name = 'Bob:;
+
+```
+
+- the variable called nam contains a reference to a a string object with a value of 'Bob'
+- The type of the name variable is inferred to be string , but you can change this type by specifying it
+- In Dart everything is an object - every value is an instance of a class with methods and properties
+- What this means is , : in C data are just primitives - just bits stored in memory. In Dart, every variable has an object around it. When it is stored in memory, it stores the raw bits + class reference+ methods + heap allocation + garbage collection tracking
+- Primitives are as fast and lean as physically possible because they map directly to hat CPU understands natively. Ie The Cpu nows how to perform two 32-bit integers in a single clock cycle - no lookup, no method call, no overhead
+- Fundamental tradeoff in programming languages
+  - More abstration (objects) - easier to write but slower to run
+  - less abstraction (primitives) - harder to write, but run faster
