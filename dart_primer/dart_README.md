@@ -98,3 +98,15 @@ late String temparature = readthermometer();// if temparature  variable is never
 - Refers to variables with the name \_ and are used to declare a variable that is non-binding: essentialy, a placeholder.the initializer if there is executed , but the value is not accessible
 
 ## Operators in dart
+
+- in dart you can implement many of the normal operators as class members
+- cascade operator (..) - lets you call multiple methods or set multiple propertieson the same object without repeating its name
+- The cascade - performs each operation, returns the original object and not the result of the method.
+- ?.. - Null- aware cascade - used when the object might be null
+- Spread operator (...) - Inserts all elements of one collection into another
+- Null aware spread (...?) - if the collection might be null
+
+- For operators that take two operands, leftmost operand determines which method is used. for example, if you have a Vector object and a Point object, then Vector + Point uses Vector addition (+).
+- Types of operators:
+  - **Arithmetic operators**
+    - +,-,-expr(reverse sign of expression),\*,/,~/(divide returning an int result) ,%
