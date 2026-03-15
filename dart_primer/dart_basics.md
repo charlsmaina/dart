@@ -16,3 +16,8 @@
   - num - parent class for int and double { use it when you want function or variable to work with any numeric type}
 - Boolean
   - bool -true or false
+
+- Collection types
+- lists - ordered + duplicate allowed
+- sets - unordered + unique values only
+- maps - key value pairs
