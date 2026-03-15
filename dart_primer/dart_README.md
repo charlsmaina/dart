@@ -2,8 +2,12 @@
 
 - This repository is a collection of code snippets writtten throughout my learning process of Dart .
 - Dart is type safe - uses a combination of static type checking and runtime checks to ensure that a variable's value always matches the variables's static type
-- var can be used to infer type
+
+- A type safe language essentially means the language has mechanisms in place to check different types are used consistently. It forbids unallowed operations at compile or run time preventing undefined behaviour. C is not type safe.i
+
+- var can be used to infer type - and lock that variable type during its lifetime
 - Normal control flow
+
 - imports - Access API's defined in other libraries
 
 ## OOP concepts
