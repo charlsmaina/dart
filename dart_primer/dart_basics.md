@@ -10,7 +10,7 @@
 
 ### Data types in Dart
 
-- Nemeric types
+- Numeric types
   - int - 64 bit
   - double - floating point number
   - num - parent class for int and double { use it when you want function or variable to work with any numeric type}
@@ -21,3 +21,8 @@
 - lists - ordered + duplicate allowed
 - sets - unordered + unique values only
 - maps - key value pairs
+
+- Special types
+- dynamic - can take values of any type at runtime
+- var lets the compiler infer the type of the value and lock it
+- Object - Everything in dart is an object : Object is the parent object from which all objects are derived from. It has some base methods
