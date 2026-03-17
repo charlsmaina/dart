@@ -43,3 +43,7 @@ null safety - a mechanism to prevent and raise errors when expressions that evel
 - A final variable - can be set only once - you cannot change its value once set
 - a const varible is a compile time constant
 -
+
+- There is a difference between a string and a string literal: - a string literal is a hardcoded string value written directly in code while a string is a variable or an expression that holds a string value at runtime
+
+-
