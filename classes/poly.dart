@@ -51,4 +51,7 @@ class BankTransfer extends PaymentMethod{
     {
         PaymentMethod ONE = MobileMoney(1500.75,"0711637046");
         checkout(ONE);
+        PaymentMethod TWO = CreditCard(1500.75,"1234567892123456789");
+        checkout(TWO);
+        PaymentMethod THREE = BankTransfer(1500.75,"KCB");
     }
