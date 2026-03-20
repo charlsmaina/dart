@@ -55,4 +55,5 @@ class BankTransfer extends PaymentMethod{
         checkout(TWO);
         PaymentMethod THREE = BankTransfer(1500.75,"KCB");
         checkout(THREE);
+        
     }
