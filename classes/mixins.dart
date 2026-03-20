@@ -17,7 +17,7 @@ Mixins are a mechanism to create reusable code that can be reused in different s
       } 
  }
 
- mixin Manageable on Employee, Engineer,Manager {
+ mixin Manageable on Employee {
     void assignTask(String task) {
         print("$name is responsible for $task in the $department department");
     }
