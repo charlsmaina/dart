@@ -13,16 +13,16 @@ In main, call the function, wait for the result, then print:
  */
 
  Future<int> getUserAge(int age) async{
-    await Future.delayed(Duration(seconds : 5));
+    await Future.delayed(Duration(seconds : 1));
     return age;
  }
- void main()
- {
-    for (int i = 0;i < 5; i += 5)
+ void main() async {
+    for (int i = 0;i < 50; i += 5)
     {
         
-        print("Fetching age...")
-        printf("Age: ${getUserAge(i)}")
+        print("Fetching age...");
+        print("Age: ${await getUserAge(i)}");
+
     }
 
  }
