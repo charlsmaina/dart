@@ -2,7 +2,7 @@ void main() {
   print("Hello, Dart");
 
   int? x; // int is non-nullable
-  x = 10;
+
   print("Null");
 
   var one = int.parse("1245"); // parse method converts strings to numbers

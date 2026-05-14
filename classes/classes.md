@@ -1,3 +1,6 @@
+
+# OOP concepts
+
 - Dart is an object-oriented language with classes and mixin-based inheritance. Every object ia an istance of a class, and all classes except null descend from Object
 
 - Classes - bundling data(properties) + behaviour(methods) together

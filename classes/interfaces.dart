@@ -15,85 +15,94 @@
 
  */
 
- class Employee{
-    String name;
-    Employee(this.name);
- }
- abstract class Trainable{
-    void attendTraining(String course);
- }
- abstract class Payable{
-    void receiveSalaly(double amount);
-   
- }
+class Employee {
+  String name;
+  Employee(this.name);
+}
 
- abstract class Manageable{
-    void assignTask(String Task);
-    void reportProgress(String state);
- }
+abstract class Trainable {
+  void attendTraining(String course);
+}
 
- class Engineer extends Employee implements Trainable,Payable,Manageable{
-    String techStack;
-    Engineer(String name,this.techStack): super(name);
-    @override
-    void attendTraining(String course)
-    {
-        print("$name has a scheduled course on $course to improve on $techStack skills ");
-    }
-    @override
-    void receiveSalaly(double amount) => print("$name earns Ksh. $amount monthly");
+abstract class Payable {
+  void receiveSalaly(double amount);
+}
 
-    @override
-    void assignTask(String task) => print("$name is currently assigned to work on $task");
-    @override
-    void reportProgress(String state) => print("$name assigned tasks are currently $state");
-    
- }
+abstract class Manageable {
+  void assignTask(String Task);
+  void reportProgress(String state);
+}
 
- class Intern extends Employee implements Trainable,Payable{
-    String college;
-    Intern(String name,this.college):super(name);
-    @override 
-    void attendTraining(String course) => print("$name from $college should receive training in $course during the internship period");
-    @override
-    void receiveSalaly(double amount) => print("$name receives a stipend of  Ksh. $amount monthly");
+class Engineer extends Employee implements Trainable, Payable, Manageable {
+  String techStack;
+  Engineer(String name, this.techStack) : super(name);
+  @override
+  void attendTraining(String course) {
+    print(
+      "$name has a scheduled course on $course to improve on $techStack skills ",
+    );
+  }
 
- }
+  @override
+  void receiveSalaly(double amount) =>
+      print("$name earns Ksh. $amount monthly");
 
- class Manager extends Employee implements Manageable,Payable{
-    String department;
-    Manager(String name,this.department):super(name);
-    @override
-    void assignTask(String task) => print("$name is responsible for $task in the $department department");
-    @override 
-    void reportProgress(String state) => print("$name assigned tasks are $state");
-    @override
-    void receiveSalaly(double amount) => print("$name earns Ksh. $amount monthly");
+  @override
+  void assignTask(String task) =>
+      print("$name is currently assigned to work on $task");
+  @override
+  void reportProgress(String state) =>
+      print("$name assigned tasks are currently $state");
+}
 
+class Intern extends Employee implements Trainable, Payable {
+  String college;
+  Intern(String name, this.college) : super(name);
+  @override
+  void attendTraining(String course) => print(
+    "$name from $college should receive training in $course during the internship period",
+  );
+  @override
+  void receiveSalaly(double amount) =>
+      print("$name receives a stipend of  Ksh. $amount monthly");
+}
 
- }
+class Manager extends Employee implements Manageable, Payable {
+  String department;
+  Manager(String name, this.department) : super(name);
+  @override
+  void assignTask(String task) =>
+      print("$name is responsible for $task in the $department department");
+  @override
+  void reportProgress(String state) => print("$name assigned tasks are $state");
+  @override
+  void receiveSalaly(double amount) =>
+      print("$name earns Ksh. $amount monthly");
+}
 
- void processPayroll(Payable employee,double amount) => employee.receiveSalaly(amount);
+void processPayroll(Payable employee, double amount) =>
+    employee.receiveSalaly(amount);
 
+void main() {
+  Engineer firmwareEngineer = Engineer(
+    "Charles",
+    "Real Time Operating Systems",
+  );
+  firmwareEngineer.receiveSalaly(987000.00);
+  firmwareEngineer.attendTraining("Operating systems primtives");
+  firmwareEngineer.assignTask("device drivers implementation");
+  firmwareEngineer.reportProgress("in progress");
 
- void main()
- {
-    Engineer firmwareEngineer = Engineer("Charles","Real Time Operating Systems");
-    firmwareEngineer.receiveSalaly(987000.00);
-    firmwareEngineer.attendTraining("Operating systems primtives");
-    firmwareEngineer.assignTask("device drivers implementation");
-    firmwareEngineer.reportProgress("in progress");
+  Intern engineeringIntern = Intern("Wambua", "JKUAT");
+  engineeringIntern.attendTraining("BMS implementation");
+  engineeringIntern.receiveSalaly(150000);
 
-    Intern engineeringIntern =Intern("Wambua","JKUAT");
-    engineeringIntern.attendTraining("BMS implementation");
-    engineeringIntern.receiveSalaly(150000);
-    
-    Manager engineeringManager =Manager("Edwin","PCB Design and Fabrication");
-    engineeringManager.receiveSalaly(1200000);
-    engineeringManager.assignTask("SoC design process");
-    engineeringManager.reportProgress("in progress");
+  Manager engineeringManager = Manager("Edwin", "PCB Design and Fabrication");
+  engineeringManager.receiveSalaly(1200000);
+  engineeringManager.assignTask("SoC design process");
+  engineeringManager.reportProgress("in progress");
 
-    processPayroll(firmwareEngineer,987000.00);
-    processPayroll(engineeringIntern,150000);
-    processPayroll(engineeringManager,1200000);
- }
+  processPayroll(firmwareEngineer, 987000.00);
+  processPayroll(engineeringIntern, 150000);
+  processPayroll(engineeringManager, 1200000);
+}
